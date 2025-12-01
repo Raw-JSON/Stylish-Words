@@ -1,4 +1,4 @@
-const CACHE_NAME = 'stylish-words-v1-0-cache';
+const CACHE_NAME = 'stylish-words-v1-1-cache';
 
 // List all core files to be cached for offline use
 const urlsToCache = [
@@ -7,8 +7,7 @@ const urlsToCache = [
     'script.js',
     'style.css',
     'manifest.json',
-    'icon-192.png',
-    'icon-512.png'
+    'icon.png' // <-- Updated to the single placeholder name
 ];
 
 self.addEventListener('install', (event) => {
