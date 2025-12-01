@@ -3,7 +3,7 @@
 // --- CHARACTER MAPS ---
 const charMaps = {
     'bold': {
-        'A': '𝗔', 'B': '𝗕', 'C': '𝗖', 'D': '𝗗', 'E': '𝗘', 'F': '𝗙', 'G': '𝗚', 'H': '𝗛', 'I': '𝗜', 'J': '𝗝', 'K': '𝗞', 'L': '𝗟', 'M': '𝗠', 'N': '𝗡', 'O': '𝗢', 'P': '𝗣', 'Q': '𝗤', 'R': '𝗥', 'S': '𝗦', 'T': '𝗧', 'U': '𝗨', 'V': '𝗩', 'W': '𝗪', 'X': '𝗫', 'Y': '𝗬', 'Z': '𝗭',
+        'A': '𝗔', 'B': '𝗕', 'C': '𝗖', 'D': '𝗗', 'E': '𝗘', 'F': '𝗙', 'G': '𝗚', 'H': '𝗛', 'I': '𝗜', 'J': '𝗝', 'K': '𝗞', 'L': '𝗟', 'M': '𝗠', 'N': '𝗡', 'O': '𝗢', 'P': '𝗣', 'Q': '𝗤', 'R': '𝗥', 'S': '𝗦', 'T': '𝗧', '𝗨': '𝗨', 'V': '𝗩', 'W': '𝗪', 'X': '𝗫', 'Y': '𝗬', 'Z': '𝗭',
         'a': '𝗮', 'b': '𝗯', 'c': '𝗰', 'd': '𝗱', 'e': '𝗲', 'f': '𝗳', 'g': '𝗴', 'h': '𝗵', 'i': '𝗶', 'j': '𝗷', 'k': '𝗸', 'l': '𝗹', 'm': '𝗺', 'n': '𝗻', 'o': '𝗼', 'p': '𝗽', 'q': '𝗾', 'r': '𝗿', 's': '𝘀', 't': '𝘁', 'u': '𝘂', 'v': '𝘃', 'w': '𝘄', 'x': '𝘅', 'y': '𝘆', 'z': '𝘇',
         '0': '𝟬', '1': '𝟭', '2': '𝟮', '3': '𝟯', '4': '𝟰', '5': '𝟱', '6': '𝟲', '7': '𝟳', '8': '𝟴', '9': '𝟵'
     },
@@ -59,6 +59,7 @@ const charMaps = {
         '0': '０', '1': '１', '2': '２', '3': '３', '4': '４', '5': '５', '6': '６', '7': '７', '8': '８', '9': '９'
     }
 };
+
 // --- CORE FUNCTIONS ---
 
 function convertText(text, map) {
@@ -137,13 +138,27 @@ function updateFontDisplay() {
         fontName.innerText = font.name;
         
         const copyButton = document.createElement('button');
-        // UPDATED CLASS: Bright Magenta (Fuchsia) Accent
-        copyButton.className = 'absolute top-4 right-4 bg-fuchsia-600 text-white p-2 rounded-full w-10 h-10 flex items-center justify-center hover:bg-fuchsia-700 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-400';
+        
+        // NEW UIVERSE IMPLEMENTATION: 
+        // 1. Use the 'copy' class defined in CSS
+        // 2. Set necessary tooltip attributes (data-text-initial, data-text-end)
+        // 3. Set custom colors via Tailwind/style attributes to override CSS vars
+        copyButton.className = 'absolute top-4 right-4 copy bg-fuchsia-600 hover:bg-fuchsia-700 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-400';
+        copyButton.setAttribute('data-text-initial', 'Copy');
+        copyButton.setAttribute('data-text-end', 'Copied!');
+        
+        // The inner HTML now includes the tooltip and both icons (clipboard/checkmark)
         copyButton.innerHTML = `
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 0 012-2h8a2 0 012 2v2m-6 12h8a2 0 002-2v-8a2 0 00-2-2h-8a2 0 00-2 2v8a2 0 002 2z" />
+            <span class="tooltip" data-text-initial="Copy" data-text-end="Copied!"></span>
+            <svg class="clipboard" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+            </svg>
+            <svg class="checkmark" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
             </svg>
         `;
+        
         copyButton.onclick = () => copyToClipboard(convertedText);
         
         card.appendChild(textPreview);
@@ -154,20 +169,15 @@ function updateFontDisplay() {
 }
 // --- CLIPBOARD ---
 let toastTimer;
-function showToast() {
-    const toast = document.getElementById('toast');
-    if (toastTimer) clearTimeout(toastTimer);
-    toast.style.opacity = '1';
-    toast.style.transform = 'translateY(0)';
-    toastTimer = setTimeout(() => {
-        toast.style.opacity = '0';
-        toast.style.transform = 'translateY(1rem)';
-    }, 3000);
-}
+// Note: We are no longer using showToast() because the CSS/JS component handles the 'Copied!' state visually.
+// However, we must keep the copyToClipboard function clean.
 
 function copyToClipboard(text) {
     if (navigator.clipboard && window.isSecureContext) {
-        navigator.clipboard.writeText(text).then(showToast);
+        navigator.clipboard.writeText(text).then(() => {
+            // Optional: Add logging if the dedicated toast system is removed
+            console.log('Copied text via Uiverse button focus state.');
+        });
     } else {
         // Fallback
         const textarea = document.createElement('textarea');
@@ -178,8 +188,8 @@ function copyToClipboard(text) {
         textarea.select();
         try {
             document.execCommand('copy');
-            showToast();
         } catch (err) { console.error('Copy failed', err); }
         document.body.removeChild(textarea);
     }
-        }
+}
+// We remove showToast and toastTimer since the Uiverse button uses the :focus state for feedback.
