@@ -4,7 +4,7 @@
 
 A lightweight, modular web application that instantly converts normal text into stylish Unicode fonts (Bold, Script, Fraktur, etc.). Perfect for social media bios and posts.
 
-**[🔗 Open the Web App](https://jayancobk.github.io/Stylish-Words/)**
+**[🔗 Open the Web App](https://raw-json.github.io/Stylish-Words/)**
 
 ---
 
