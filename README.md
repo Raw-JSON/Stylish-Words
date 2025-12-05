@@ -9,13 +9,13 @@ A lightweight, modular web application that instantly converts normal text into 
 ---
 
 ## 🚀 Features
-* **[span_5](start_span)12+ Styles:** Includes Bold, Italic, Script, Fraktur, Monospace, Double-Struck, and more[span_5](end_span).
-* **[span_6](start_span)Native Share:** Use the Share button to export styled text directly to other mobile apps[span_6](end_span).
-* **[span_7](start_span)Instant Preview:** Real-time conversion as you type[span_7](end_span).
-* **[span_8](start_span)Theming Support:** Now includes the **Minimalist Forest** color palette[span_8](end_span).
-* **[span_9](start_span)One-Click Copy:** Tap any card to copy the style to your clipboard[span_9](end_span).
-* **[span_10](start_span)Responsive Design:** Works perfectly on mobile and desktop[span_10](end_span).
-* **[span_11](start_span)Dark Mode:** Built with a sleek, eye-friendly dark theme[span_11](end_span).
+* **12+ Styles:** Includes Bold, Italic, Script, Fraktur, Monospace, Double-Struck, and more.
+* **Native Share:** Use the Share button to export styled text directly to other mobile apps.
+* **Instant Preview:** Real-time conversion as you type.
+* **Theming Support:** Now includes the **Minimalist Forest** color palette.
+* **One-Click Copy:** Tap any card to copy the style to your clipboard.
+* **Responsive Design:** Works perfectly on mobile and desktop.
+* **Dark Mode:** Built with a sleek, eye-friendly dark theme.
 * 
 ## 🛠 Tech Stack
 * **HTML5:** Semantic structure.
