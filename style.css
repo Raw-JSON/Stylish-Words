@@ -4,6 +4,8 @@
 /* Base font */
 body {
     font-family: "Inter", sans-serif;
+    /* FIX: Ensure custom var is used for background */
+    background-color: var(--bg); 
 }
 
 /* Default Theme: Dark (Currently the default set via Tailwind, but defined here for potential override) */
