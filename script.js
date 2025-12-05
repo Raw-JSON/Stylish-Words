@@ -156,9 +156,9 @@ function updateFontDisplay() {
             copyToClipboard(convertedText);
         };
         
-        // SHARE BUTTON (New) - Added to the bottom left corner of the card
+        // SHARE BUTTON (Fix: Changed from bottom-4 left-4 to top-16 right-4)
         const shareButton = document.createElement('button');
-        shareButton.className = 'absolute bottom-4 left-4 bg-gray-700 text-gray-300 p-2 rounded-full w-10 h-10 flex items-center justify-center hover:bg-gray-600 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-gray-500';
+        shareButton.className = 'absolute top-16 right-4 bg-gray-700 text-gray-300 p-2 rounded-full w-10 h-10 flex items-center justify-center hover:bg-gray-600 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-gray-500';
         shareButton.innerHTML = shareSVG;
         shareButton.title = 'Share Text';
         shareButton.onclick = (e) => {
@@ -224,4 +224,4 @@ function shareText(text) {
 window.copyToClipboard = copyToClipboard;
 window.shareText = shareText;
 window.updateFontDisplay = updateFontDisplay;
-
+            
