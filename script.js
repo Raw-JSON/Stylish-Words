@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Set stylized title
     const titleEl = document.getElementById('appTitle');
-    titleEl.innerText = convertMixed("stylish words.");
+    titleEl.innerText = convertMixed("0FluffStyle."); // <--- CORRECTED NAME HERE
     
     // Set GitHub Button
     const githubBtn = document.getElementById('githubButton');
