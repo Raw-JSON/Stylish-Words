@@ -7,10 +7,6 @@ A fast, lightweight web app that turns plain text into clean Unicode styles for 
 
 ---
 
-## 📸 Preview  
-![0FluffStyle Preview](https://github.com/user-attachments/assets/cf9e7bf8-b794-4537-9d45-22e3f1b55123)
----
-
 ## 🚀 Features
 
 - **12+ Unicode Styles** — Bold, Script, Fraktur, Double-Struck, Monospace, and more.
