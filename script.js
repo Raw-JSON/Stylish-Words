@@ -1,4 +1,4 @@
-// Stylish Words Logic
+// 0FluffStyle Logic
 
 // --- CHARACTER MAPS ---
 const charMaps = {
