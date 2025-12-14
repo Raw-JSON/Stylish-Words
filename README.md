@@ -7,6 +7,16 @@ A fast, lightweight web app that turns plain text into clean Unicode styles for 
 
 ---
 
+## 🛠 How It Works: Pure Client-Side Power
+
+This application operates entirely in your browser using **Vanilla JavaScript**. 
+
+* **No Server Uploads:** Your text is *never* sent to a server. The conversion is instant and local, ensuring maximum privacy and speed.
+* **Unicode Magic:** The styling works by swapping standard Roman letters and numbers (A, B, 1) with their stylized, globally supported Unicode character equivalents (𝐀, 𝗕, 𝟙). The styles are stored in a simple JavaScript object map (`char_maps.js`) which the main script uses for conversion.
+* **0Fluff Efficiency:** This approach requires no external APIs or dependencies, keeping the application lightweight and blazing fast.
+ 
+---
+
 ## 🚀 Features
 
 - **12+ Unicode Styles** — Bold, Script, Fraktur, Double-Struck, Monospace, and more.
