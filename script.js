@@ -27,6 +27,10 @@ const fonts = [
     { name: 'Bold Italic', converter: (text) => convertText(text, charMaps.serifBoldItalic) },
     { name: 'Script', converter: (text) => convertText(text, charMaps.script) },
     { name: 'Fraktur', converter: (text) => convertText(text, charMaps.fraktur) },
+    // --- NEW STYLES ADDED HERE ---
+    { name: 'Bubble', converter: (text) => convertText(text, charMaps.bubble) },
+    { name: 'Tiny Text (Superscript)', converter: (text) => convertText(text, charMaps.tiny) },
+    // -----------------------------
     { name: 'Monospace', converter: (text) => convertText(text, charMaps.monospace) },
     { name: 'Double-Struck', converter: (text) => convertText(text, charMaps.doubleStruck) },
     { name: 'Circled', converter: (text) => convertText(text, charMaps.circled) },
@@ -55,9 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Set stylized title
     const titleEl = document.getElementById('appTitle');
-    // --- START CHANGE ---
     titleEl.innerText = convertText("0FluffStyle.", charMaps.serifBold); // Using Bold (Serif) for consistent style
-    // --- END CHANGE ---
     
     // Set GitHub Button
     const githubBtn = document.getElementById('githubButton');
