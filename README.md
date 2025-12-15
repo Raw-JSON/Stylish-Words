@@ -23,7 +23,6 @@ This application operates entirely in your browser using **Vanilla JavaScript**.
 - **Dynamic Char Counter** — Provides instant feedback on text length (e.g., max 280).
 - **Native Share Support** — Send styled text straight into your apps.
 - **Instant Preview** — Converts in real-time as you type.
-- **New Theme:** **Minimalist Forest** palette included.
 - **One-Click Copy** — Tap a card to instantly copy.
 - **Responsive Layout** — Looks clean on mobile *and* desktop.
 - **Dark Mode First** — Built for low-light readability.
