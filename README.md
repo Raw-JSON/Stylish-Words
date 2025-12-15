@@ -1,7 +1,6 @@
 # 0FluffStyle ✨
 
-> **Type something. Make it stylish.**  
-A fast, lightweight web app that turns plain text into clean Unicode styles for bios, socials, and posts.
+> **Type something. Make it stylish.** A fast, lightweight web app that turns plain text into clean Unicode styles for bios, socials, and posts.
 
 **[🔗 Open 0FluffStyle](https://raw-json.github.io/Stylish-Words/)**
 
@@ -9,7 +8,7 @@ A fast, lightweight web app that turns plain text into clean Unicode styles for 
 
 ## 🛠 How It Works: Pure Client-Side Power
 
-This application operates entirely in your browser using **Vanilla JavaScript**. 
+This application operates entirely in your browser using **Vanilla JavaScript**.
 
 * **No Server Uploads:** Your text is *never* sent to a server. The conversion is instant and local, ensuring maximum privacy and speed.
 * **Unicode Magic:** The styling works by swapping standard Roman letters and numbers (A, B, 1) with their stylized, globally supported Unicode character equivalents (𝐀, 𝗕, 𝟙). The styles are stored in a simple JavaScript object map (`char_maps.js`) which the main script uses for conversion.
@@ -17,9 +16,11 @@ This application operates entirely in your browser using **Vanilla JavaScript**.
  
 ---
 
-## 🚀 Features
+## 🚀 Features (v1.3.2)
 
-- **12+ Unicode Styles** — Bold, Script, Fraktur, Double-Struck, Monospace, and more.
+- **14+ Unicode Styles** — Now includes Bold, Script, Fraktur, Double-Struck, Monospace, **Bubble**, **Tiny Text (Superscript)**, and more.
+- **Input Sanitization** — Core logic strips invisible characters and ZWJ (Zero Width Joiners) for clean, reliable output.
+- **Dynamic Char Counter** — Provides instant feedback on text length (e.g., max 280).
 - **Native Share Support** — Send styled text straight into your apps.
 - **Instant Preview** — Converts in real-time as you type.
 - **New Theme:** **Minimalist Forest** palette included.
@@ -31,15 +32,15 @@ This application operates entirely in your browser using **Vanilla JavaScript**.
 
 ## 🛠 Tech Stack
 
-- **HTML5** — Clean, semantic structure.  
-- **Tailwind CSS** — Utility-first styling.  
-- **Vanilla JavaScript** — Dependency-free logic.  
-- **Inter Font** — Modern, readable typeface.
+- **HTML5** — Clean, semantic structure. 
+- **Tailwind CSS** — Utility-first styling. 
+- **Vanilla JavaScript** — Dependency-free logic. 
+- **Inter Font** — Modern, readable typeface. 
 
 ---
 
 ## 📄 License
-MIT License. Free to use, remix, and adapt.
+MIT License(LICENSE). Free to use, remix, and adapt.
 
 ---
 
